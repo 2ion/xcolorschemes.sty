@@ -1,0 +1,1 @@
+![Color scheme preview](https://github.com/2ion/xcolorscheme.sty/colortable.png)
