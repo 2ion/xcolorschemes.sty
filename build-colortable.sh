@@ -25,6 +25,6 @@ echo '\end{document}'
 } > "$o"
 
 pdflatex "$o"
-inkscape -f "$o.pdf" -e "$o.png"
+pdftocairo -singlefile -png "$o.pdf"
 
 rm -f "$o" *.aux *.log
