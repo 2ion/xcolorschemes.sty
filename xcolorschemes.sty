@@ -1,0 +1,30 @@
+\NeedsTeXFormat{LaTeX2e}
+\ProvidesPackage
+  {xcolorschemes}
+  [14/04/05 v1.0
+    Collection of document color schemes]
+
+\RequirePackage{xcolor}
+
+\DeclareOption{tokyo}{
+  \definecolor{tokyogreen}{HTML}{199332}
+  \definecolor{tokyored}{HTML}{943219}
+  \definecolor{tokyoorange}{HTML}{E8AE27}
+  \definecolor{tokyoblue}{HTML}{193E94}
+  \definecolor{tokyocyan}{HTML}{196F94}
+  \definecolor{tokyoviolet}{HTML}{94197B}
+}
+
+\DeclareOption{solarized}{
+  \definecolor{solyellow}{HTML}{B58900}
+  \definecolor{solorange}{HTML}{CB4B16}
+  \definecolor{solred}{HTML}{DC322F}
+  \definecolor{solmagenta}{HTML}{D33682}
+  \definecolor{solviolet}{HTML}{6C71C4}
+  \definecolor{solblue}{HTML}{268BD2}
+  \definecolor{solcyan}{HTML}{2AA198}
+  \definecolor{solgreen}{HTML}{859900}
+}
+
+\ProcessOptions\relax
+\endinput
