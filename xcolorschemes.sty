@@ -3,7 +3,6 @@
   {xcolorschemes}
   [14/04/05 v1.0
     Collection of document color schemes]
-
 \RequirePackage{xcolor}
 
 \DeclareOption{tokyo}{
@@ -55,8 +54,17 @@
   \definecolor{jellycyan1}{HTML}{69EDE1}
 }
 
+\DeclareOption{fu}{
+  \definecolor{fublue}{HTML}{003366}
+  \definecolor{fugreen}{HTML}{99CC00}
+  \definecolor{fured}{HTML}{CC0000}
+  \definecolor{fuorange}{HTML}{FF9900}
+  \definecolor{fupblue0}{HTML}{002B7F}
+  \definecolor{fupgrey}{HTML}{2B2B28}
+}
+
 \DeclareOption{all}{
-  \ExecuteOptions{tokyo,solarized,jelly,jelly}
+  \ExecuteOptions{tokyo,solarized,jelly,fu}
 }
 
 \ProcessOptions\relax
