@@ -34,8 +34,28 @@
   \definecolor{solgreen}{HTML}{859900}
 }
 
+\DeclareOption{jelly}{
+  \definecolor{jellygrey0}{HTML}{3B3B3B}
+  \definecolor{jellygrey1}{HTML}{444444}
+  \definecolor{jellygrey2}{HTML}{ADADAD}
+  \definecolor{jellygrey3}{HTML}{CCCCCC}
+  \definecolor{jellyred0}{HTML}{CF6A4C}
+  \definecolor{jellyorange0}{HTML}{D8AD4C}
+  \definecolor{jellygreen0}{HTML}{99AD6A}
+  \definecolor{jellyviolet0}{HTML}{A037B0}
+  \definecolor{jellyblue0}{HTML}{597BC5}
+  \definecolor{jellycyan0}{HTML}{71B9F8}
+
+  \definecolor{jellyred1}{HTML}{ED6975}
+  \definecolor{jellyorange1}{HTML}{EDE169}
+  \definecolor{jellygreen1}{HTML}{B8ED69}
+  \definecolor{jellyviolet1}{HTML}{ED69B8}
+  \definecolor{jellyblue1}{HTML}{69B8ED}
+  \definecolor{jellycyan1}{HTML}{69EDE1}
+}
+
 \DeclareOption{all}{
-  \ExecuteOptions{tokyo,solarized}
+  \ExecuteOptions{tokyo,solarized,jelly,jelly}
 }
 
 \ProcessOptions\relax
