@@ -1,30 +1,62 @@
 #!/bin/bash
+# vim: set tw=0
+
+echo "xcolorschemes.sty LaTeX package - colortable generator"
+echo "------------------------------------------------------"
 
 o=colortable
 
 make_tablehead(){
-  echo '\begin{tabular}{>{\ttfamily}rl}'
+  echo '\begin{tabular}{>{\ttfamily}ll>{\ttfamily}l}
+  \toprule Name & & Hex\\\otoprule'
 }
 
 make_tableend(){
-  echo '\end{tabular}'
+  echo '\bottomrule\end{tabular}'
 }
+
+echo -n "Generating LaTeX input from xcolorschemes.sty ... "
 
 {
   echo '
 \documentclass[border=1cm]{standalone}
 \usepackage{array}
+\usepackage{booktabs}
+\usepackage{tabularx}
+\newcommand{\otoprule}{\midrule[\heavyrulewidth]}
 \usepackage[all]{xcolorschemes}
-\newcommand{\ritem}[1]{#1 & {\color{#1}\rule{.5\textwidth}{1ex}}\\}
+\newcommand{\ritem}[2]{#1 & {\color{#1}\rule{.5\textwidth}{1ex}} & \##2\\}
 \begin{document}
 '
 make_tablehead
-<xcolorschemes.sty sed -n '/definecolor/ s/^.*definecolor{\(.*\)}{\(.*\)}{\(.*\)}$/\\ritem{\1}/p;/DeclareOption/s/^.*$/\\hline/p'
+<xcolorschemes.sty sed -n '/definecolor/ s/^.*definecolor{\(.*\)}{\(.*\)}{\(.*\)}$/\\ritem{\1}{\3}/p;/DeclareOption/s/^.*$/\\midrule/p'
 make_tableend
 echo '\end{document}'
 } > "$o"
 
-pdflatex "$o"
-pdftocairo -singlefile -png "$o.pdf"
+echo "OK"
 
-rm -f "$o" *.aux *.log
+echo -n "Running pdfLaTeX ... "
+
+if ! pdflatex "$o" &>/dev/null ; then
+  echo FAILED
+  exit 1
+else
+  echo OK
+fi
+
+echo -n "Creating the PNG image based on the PDF document ... "
+
+if pdftocairo -singlefile -png "$o.pdf" ; then
+  echo OK
+else
+  echo FAILED
+  exit 1
+fi
+
+echo -n "Clean up ... "
+
+rm -f "$o" *.aux *.log && echo OK || echo FAILED
+
+echo "Done."
+echo "------------------------------------------------------"
