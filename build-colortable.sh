@@ -4,6 +4,20 @@
 echo "xcolorschemes.sty LaTeX package - colortable generator"
 echo "------------------------------------------------------"
 
+deps=(pdftocairo pdflatex)
+depfail=0
+for d in ${deps[@]} ; do
+  if ! type $d &>/dev/null ; then
+    echo "Error: missing dependency: $d"
+    depfail=1
+  fi
+done
+if (( $depfail == 1)) ; then
+  echo "Can't run because of missing dependencies."
+  echo "------------------------------------------------------"
+  exit 1
+fi
+
 o=colortable
 
 make_tablehead(){
@@ -60,3 +74,4 @@ rm -f "$o" *.aux *.log && echo OK || echo FAILED
 
 echo "Done."
 echo "------------------------------------------------------"
+exit 0
