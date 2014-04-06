@@ -22,7 +22,7 @@ o=colortable
 
 make_tablehead(){
   echo '\begin{tabular}{>{\ttfamily}ll>{\ttfamily}l}
-  \toprule Name & & Hex\\\otoprule'
+  \toprule Name & & Color definition\\\otoprule'
 }
 
 make_tableend(){
