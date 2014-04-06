@@ -40,10 +40,9 @@ echo -n "Generating LaTeX input from xcolorschemes.sty ... "
 \newcommand{\otoprule}{\midrule[\heavyrulewidth]}
 \usepackage[all]{xcolorschemes}
 \newcommand{\ritem}[2]{#1 & {\color{#1}\rule{.5\textwidth}{1ex}} & \##2\\}
-\begin{document}
-'
+\begin{document}'
 make_tablehead
-<xcolorschemes.sty sed -n '/definecolor/ s/^.*definecolor{\(.*\)}{\(.*\)}{\(.*\)}$/\\ritem{\1}{\3}/p;/DeclareOption/s/^.*$/\\midrule/p'
+<xcolorschemes.sty sed -n '/definecolor/s/^.*definecolor{\(.*\)}{\(.*\)}{\(.*\)}$/\\ritem{\1}{\3}/p;/DeclareOption/s/^.*$/\\midrule/p'
 make_tableend
 echo '\end{document}'
 } > "$o"
@@ -59,7 +58,7 @@ else
   echo OK
 fi
 
-echo -n "Creating the PNG image based on the PDF document ... "
+echo -n "Creating the PNG image from the PDF document ... "
 
 if pdftocairo -singlefile -png "$o.pdf" ; then
   echo OK
@@ -68,7 +67,7 @@ else
   exit 1
 fi
 
-echo -n "Clean up ... "
+echo -n "Cleaning up ... "
 
 rm -f "$o" *.aux *.log && echo OK || echo FAILED
 

@@ -28,12 +28,21 @@ Available color schemes/package options
   all         Define all colorschemes.
   solarized   The SOLARIZED colorscheme. Defines the color names
               solgreen, solred, solblue and so on.
+              Uses HTML/hex color definitions.
   tokyo       The TOKYO colorscheme. Defines the color names
               tokyogreen, tokyored, tokyoblue and so on.
+              Uses HTML/hex color definitions.
   jelly       Defines jellygrey0, jellyred0 and so on.
               Has multiple grey tones, and a bright color variant
               jellyred1, jellygreen1 and so on.
-  fu          
+              Uses HTML/hex color definitions.
+  fu          Colors from the Corporate Design of the Free University
+              of Berlin.
+              Uses HTML/hex color defintions.
+  pantone     Defines 1044 different colors from the Pantone color
+              scale. Naming scheme: p<decimal number>, see the color
+              table below for the included number ranges.
+              Uses CMYK color definitions.
 ```
 
 Color table
