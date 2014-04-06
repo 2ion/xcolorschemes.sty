@@ -1,8 +1,10 @@
 xcolorschemes.sty
 =================
 
-This LaTeX package provides custom document color schemes which I use or
-have used. It loads xcolor for defining the colors.
+This LaTeX package provides 1044 CMYK Pantone color definitions and
+custom document color schemes which I use or have used. It loads xcolor
+for defining the colors. Please refer to the documentation and color
+table below for the naming schemes and included colors.
 
 Preview
 -------
