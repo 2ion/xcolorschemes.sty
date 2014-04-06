@@ -1,12 +1,21 @@
 \NeedsTeXFormat{LaTeX2e}
 \ProvidesPackage
   {xcolorschemes}
-  [14/04/05 v1.0
+  [14/04/06 v1.1
     Collection of document color schemes]
 \RequirePackage{xcolor}
 
+\DeclareOption{fuji}{
+  \typeout{xcolorschemes.sty: fuji}
+  \definecolor{fuji0}{HTML}{0A0B0D}
+  \definecolor{fuji1}{HTML}{090C25}
+  \definecolor{fuji2}{HTML}{71413D}
+  \definecolor{fuji3}{HTML}{BD6240}
+  \definecolor{fuji4}{HTML}{D87845}
+}
+
 \DeclareOption{tokyo}{
-  \typeout{xcolorschemes.sty: Defining colors: tokyo}
+  \typeout{xcolorschemes.sty: tokyo}
   \definecolor{tokyogreen}{HTML}{199332}
   \definecolor{tokyored}{HTML}{943219}
   \definecolor{tokyoorange}{HTML}{E8AE27}
@@ -16,7 +25,7 @@
 }
 
 \DeclareOption{solarized}{
-  \typeout{xcolorschemes.sty: Defining colors: solarized}
+  \typeout{xcolorschemes.sty: solarized}
   \definecolor{solbase03}{HTML}{002B36}
   \definecolor{solbase02}{HTML}{073642}
   \definecolor{solbase01}{HTML}{586E75}
@@ -36,7 +45,7 @@
 }
 
 \DeclareOption{jelly}{
-  \typeout{xcolorschemes.sty: Defining colors: jelly}
+  \typeout{xcolorschemes.sty: jelly}
   \definecolor{jellygrey0}{HTML}{3B3B3B}
   \definecolor{jellygrey1}{HTML}{444444}
   \definecolor{jellygrey2}{HTML}{ADADAD}
@@ -58,7 +67,7 @@
 }
 
 \DeclareOption{fu}{
-  \typeout{xcolorschemes.sty: Defining colors: fu}
+  \typeout{xcolorschemes.sty: fu}
   \definecolor{fublue}{HTML}{003366}
   \definecolor{fugreen}{HTML}{99CC00}
   \definecolor{fured}{HTML}{CC0000}
@@ -68,7 +77,7 @@
 }
 
 \DeclareOption{pantone}{
-  \typeout{xcolorschemes.sty: Defining colors: pantone}
+  \typeout{xcolorschemes.sty: pantone}
   \definecolor{p100}{cmyk}{0.0,0.0,0.51,0.0}
   \definecolor{p101}{cmyk}{0.0,0.0,0.79,0.0}
   \definecolor{p102}{cmyk}{0.0,0.1,0.95,0.0}
@@ -1117,7 +1126,7 @@
 }
 
 \DeclareOption{all}{
-  \ExecuteOptions{tokyo,solarized,jelly,fu,pantone}
+  \ExecuteOptions{tokyo,solarized,jelly,fu,pantone,fuji}
 }
 
 \ProcessOptions\relax
