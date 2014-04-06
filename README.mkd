@@ -33,6 +33,7 @@ Available color schemes/package options
   jelly       Defines jellygrey0, jellyred0 and so on.
               Has multiple grey tones, and a bright color variant
               jellyred1, jellygreen1 and so on.
+  fu          
 ```
 
 Color table
