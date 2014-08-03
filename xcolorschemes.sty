@@ -14,6 +14,26 @@
   \definecolor{fuji4}{HTML}{D87845}
 }
 
+\DeclareOption{monokai}{
+  \typeout{xcolorschemes.sty: monokai}
+  \definecolor{monokai00}{HTML}{49483E}
+  \definecolor{monokai10}{HTML}{75715E}
+  \definecolor{monokai01}{HTML}{F92672}
+  \definecolor{monokai11}{HTML}{FC5C94}
+  \definecolor{monokai02}{HTML}{A6E22E}
+  \definecolor{monokai12}{HTML}{C1F161}
+  \definecolor{monokai03}{HTML}{FD971F}
+  \definecolor{monokai13}{HTML}{FEB257}
+  \definecolor{monokai04}{HTML}{66D9EF}
+  \definecolor{monokai14}{HTML}{8DE6F7}
+  \definecolor{monokai05}{HTML}{AE81FF}
+  \definecolor{monokai15}{HTML}{C2A1FF}
+  \definecolor{monokai06}{HTML}{A1EFE4}
+  \definecolor{monokai16}{HTML}{BBF7EF}
+  \definecolor{monokai07}{HTML}{F8F8F2}
+  \definecolor{monokai17}{HTML}{F8F8F0}
+}
+
 \DeclareOption{tokyo}{
   \typeout{xcolorschemes.sty: tokyo}
   \definecolor{tokyogreen}{HTML}{199332}
@@ -1126,7 +1146,7 @@
 }
 
 \DeclareOption{all}{
-  \ExecuteOptions{tokyo,solarized,jelly,fu,pantone,fuji}
+  \ExecuteOptions{tokyo,solarized,jelly,fu,pantone,fuji,monokai}
 }
 
 \ProcessOptions\relax

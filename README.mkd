@@ -31,6 +31,7 @@ Available color schemes/package options
   solarized   The SOLARIZED colorscheme. Defines the color names
               solgreen, solred, solblue and so on.
               Uses HTML/hex color definitions.
+  monokai     The famous Monokai color palette.
   tokyo       The TOKYO colorscheme. Defines the color names
               tokyogreen, tokyored, tokyoblue and so on.
               Uses HTML/hex color definitions.
